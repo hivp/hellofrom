@@ -8,16 +8,16 @@ Project to implement a task to test Docker, Jenkinsfile, Java, Kubernetes, Gradl
 * Docker
 
 ## Getting started
-Create your project with:
+Get project from GitHub:
 
 ```
-git clone https://github.com/hivp/hellofrom.git PROJECT_NAME_FOLDER
+git clone https://github.com/hivp/hellofrom.git
 ```
 
-Replace `PROJECT_NAME_FOLDER` with the name of your local folder project and execute:
+Go to the project folder
 
 ```
-cd PROJECT_NAME
+cd hellofrom
 ```
 
 ## Building the project with Gradle
