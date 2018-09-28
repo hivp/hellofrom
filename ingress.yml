@@ -1,0 +1,16 @@
+apiVersion: extensions/v1beta1
+kind: Ingress
+metadata:
+  name: test-ingress
+spec:
+  rules:
+  - hosts:
+    - testhello
+  rules:
+  - host: testhello
+    http:
+      paths:
+      - backend:
+          serviceName: hellofrom
+          servicePort: 8080
+        path: /hellofrom

@@ -1,0 +1,35 @@
+apiVersion: extensions/v1beta1
+kind: Deployment
+metadata:
+  name: hellofrom
+spec:
+  replicas: 1 # tells deployment to run 1 pods
+  template:
+    metadata:
+      labels:
+        app: hellofrom
+    spec:
+      containers:
+      - name: hellofrom
+        image: hugovarela/hellofrom:1.0
+        imagePullPolicy: Always
+        ports:
+        - containerPort: 9080
+        env:
+          - name: K8S_POD_NAME
+            valueFrom:
+              fieldRef:
+                fieldPath: metadata.name
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: hellofrom
+spec:
+  ports:
+    - port: 8080
+      targetPort: 8080
+      nodePort: 30397
+  selector:
+    app: hellofrom
+  type: NodePort
