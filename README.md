@@ -99,7 +99,7 @@ curl http://localhost:8080
 
 ## Testing the image in Kubernetes with minikube ip
 
-For this task, we will use Docker Hub to get the image, it is in deployment.yml (image: hugovarela/hellofrom:1.0), you can use your own registry to get the image, just change it in the file.
+For this task, we will use Docker Hub to get the image, it is in deployment.yml (image: hugovarela/hellofrom:1.0), you can use your own registry to get the image, just change it in the file. The docker image is already in Docker Hub https://hub.docker.com/r/hugovarela/hellofrom/
 
 The image can be tested using Minikube (assuming Minikube service is running locally).
 
@@ -146,3 +146,9 @@ curl http://testhello/hellofrom
 
 (example output) Hello from hellofrom-56675f664c-qqbzz
 ```
+
+## Using Jenkinsfile to build app
+
+A Jenkinsfile is provided to build the app. To avoid breaking your local Docker Registry, the docker image generation is commented, just uncomment.
+The stage for uploading the docker image to docker hub is also commented. In a normal environment, this stage should be replaced by your own registry.
+Just use the Jenkinsfile in a Jenkins Job as you desire.
