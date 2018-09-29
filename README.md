@@ -29,6 +29,21 @@ To build the project and generate the Jar, just use:
 
 It generates a _fat-jar_ in the `build/libs` directory.
 
+## Build the project using the Jenkinsfile
+
+A Jenkinsfile is provided to build the app.
+
+Stages added:
+* Get source code from github
+* Build app with gradle
+* Generate docker image in the local docker registry
+
+The stage for uploading the docker image to Docker Hub is commented. In a normal environment, this stage should be replaced by your own registry.
+
+The docker image is already in Docker Hub https://hub.docker.com/r/hugovarela/hellofrom/
+
+Just use the Jenkinsfile in a Jenkins Job as you desire.
+
 ## Running the project with Gradle
 Once you have retrieved the project, you can check that everything works with:
 
@@ -146,9 +161,3 @@ curl http://testhello/hellofrom
 
 (example output) Hello from hellofrom-56675f664c-qqbzz
 ```
-
-## Using Jenkinsfile to build app
-
-A Jenkinsfile is provided to build the app. To avoid breaking your local Docker Registry, the docker image generation is commented, just uncomment.
-The stage for uploading the docker image to docker hub is also commented. In a normal environment, this stage should be replaced by your own registry.
-Just use the Jenkinsfile in a Jenkins Job as you desire.
