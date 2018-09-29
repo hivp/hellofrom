@@ -10,7 +10,6 @@ node {
         bat 'gradlew.bat clean build'
       }
    }
-  /*  //Uncomment for your local testing
    stage('Generate docker image in local registry') {
       if(isUnix()) {
         sh 'docker build -t hellofrom:1.0 .'
@@ -18,6 +17,7 @@ node {
         bat 'docker build -t hellofrom:1.0 .'
       }
    }
+   /*
    stage('Upload to Docker Hub'){
      if(isUnix()) {
        sh 'docker tag hellofrom:1.0 hugovarela/hellofrom:1.0'
