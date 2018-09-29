@@ -24,7 +24,7 @@ cd hellofrom
 To build the project and generate the Jar, just use:
 
 ```
-./gradlew shadowJar
+./gradlew build
 ```
 
 It generates a _fat-jar_ in the `build/libs` directory.
