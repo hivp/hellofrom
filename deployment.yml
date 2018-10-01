@@ -14,7 +14,7 @@ spec:
         image: hugovarela/hellofrom:1.0
         imagePullPolicy: Always
         ports:
-        - containerPort: 9080
+        - containerPort: 8080
         env:
           - name: K8S_POD_NAME
             valueFrom:
