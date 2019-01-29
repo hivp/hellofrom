@@ -14,7 +14,7 @@ Get project from GitHub:
 git clone https://github.com/hivp/hellofrom.git
 ```
 
-Go to the project folder
+Go to the project folder:
 
 ```
 cd hellofrom
